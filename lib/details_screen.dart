@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lamp_app_flutter/components/details_screen/colors_section.dart';
 import 'package:lamp_app_flutter/constants.dart';
 import 'package:lamp_app_flutter/data.dart';
 import 'package:sizer/sizer.dart';
@@ -75,124 +76,7 @@ class DetailsScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        spacing: 4.w,
-                        children: [
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    colorFilter: ColorFilter.mode(
-                                      const Color.fromARGB(255, 255, 223, 126),
-                                      BlendMode.color,
-                                    ),
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(lamp.imageUrl),
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withAlpha(50),
-                                      blurRadius: 8,
-                                      offset: Offset(0, 6),
-                                    ),
-                                  ],
-
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    colorFilter: ColorFilter.mode(
-                                      const Color.fromARGB(255, 255, 158, 190),
-                                      BlendMode.color,
-                                    ),
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(lamp.imageUrl),
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withAlpha(50),
-                                      blurRadius: 8,
-                                      offset: Offset(0, 6),
-                                    ),
-                                  ],
-
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    colorFilter: ColorFilter.mode(
-                                      Colors.blueGrey,
-                                      BlendMode.color,
-                                    ),
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(lamp.imageUrl),
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withAlpha(50),
-                                      blurRadius: 8,
-                                      offset: Offset(0, 6),
-                                    ),
-                                  ],
-
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    colorFilter: ColorFilter.mode(
-                                      Colors.black.withAlpha(150),
-                                      BlendMode.darken,
-                                    ),
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(lamp.imageUrl),
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withAlpha(50),
-                                      blurRadius: 8,
-                                      offset: Offset(0, 6),
-                                    ),
-                                  ],
-
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "+3",
-                                    style: TextStyle(
-                                      fontSize: 18.sp,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      ColorsSection(lamp: lamp),
                       Row(
                         spacing: 4.w,
                         children: [
