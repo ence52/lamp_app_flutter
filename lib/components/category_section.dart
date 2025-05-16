@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lamp_app_flutter/constants.dart';
+import 'package:lamp_app_flutter/data.dart';
+import 'package:sizer/sizer.dart';
 
 class CategorySection extends StatefulWidget {
   const CategorySection({super.key});
@@ -25,24 +29,27 @@ class _CategorySectionState extends State<CategorySection> {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 6.w),
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: selectedIndex == index ? kYellowColor : kSecondaryColor,
                 boxShadow:
                     selectedIndex == index
                         ? [
                           BoxShadow(
                             color: Colors.black.withAlpha(50),
                             blurRadius: 8,
-                            offset: Offset(0, 6),
+                            offset: Offset(0, 10),
                           ),
                         ]
                         : [],
-                color: selectedIndex == index ? kYellowColor : kSecondaryColor,
-                borderRadius: BorderRadius.circular(15),
               ),
               margin: EdgeInsets.only(right: 5.w),
               child: Center(
                 child: Text(
                   lampTypes[index],
-                  style: TextStyle(fontSize: 15.5.sp),
+                  style: GoogleFonts.poppins(
+                    fontSize: 15.5.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),

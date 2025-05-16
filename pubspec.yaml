@@ -12,6 +12,7 @@ dependencies:
   google_fonts: ^6.2.1
   sizer: ^3.0.5
   fluentui_system_icons: ^1.1.273
+  superellipse_shape: ^0.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

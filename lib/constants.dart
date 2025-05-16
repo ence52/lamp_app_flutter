@@ -8,7 +8,7 @@ final ThemeData darkTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.grey[900],
     iconTheme: IconThemeData(color: Colors.white),
-    titleTextStyle: TextStyle(
+    titleTextStyle: GoogleFonts.poppins(
       color: Colors.white,
       fontSize: 20,
       fontWeight: FontWeight.bold,
